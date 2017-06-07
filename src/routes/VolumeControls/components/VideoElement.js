@@ -1,8 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const VideoElement = () => (
-  <video autoPlay className='col-10' src={Video} />
+export const VideoElement = source => (
+  <video autoPlay>
+    <source href={JSON.stringify(source)} />
+  </video>
 )
 
 VideoElement.propTypes = {

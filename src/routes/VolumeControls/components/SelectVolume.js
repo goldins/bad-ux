@@ -1,22 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export const SelectVolumeView = (volume, setVolume) => (
+export const SelectVolume = ({ volume, setVolume, getVolumeOptions }) => (
   <div>
     <span>Volume: {volume}</span>
-    <span>Mute</span>
-    <span>1</span>
-    <span>2</span>
-    <span>3</span>
-    <span>4</span>
-    <span>5</span>
-    <span>6</span>
+    <ul>
+      <li>Mute</li>
+    </ul>
   </div>
 )
 
-SelectVolumeView.propTypes = {
+SelectVolume.propTypes = {
   volume: PropTypes.number.isRequired,
-  setVolume: PropTypes.func.isRequired
+  setVolume: PropTypes.func.isRequired,
+  getVolumeOptions: PropTypes.func.isRequired
 }
 
-export default SelectVolumeView
+export default SelectVolume
