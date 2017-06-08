@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 export const SelectVolume = ({ volume, setVolume, getVolumeOptions }) => (
   <div>
     <span>Volume: {volume}</span>
+    {getVolumeOptions().map((opt) => (<li onClick={setVolume(opt)}>{opt}</li>))}
     <ul>
       <li>Mute</li>
     </ul>

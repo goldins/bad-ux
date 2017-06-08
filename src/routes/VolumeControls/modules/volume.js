@@ -20,7 +20,8 @@ export const getVolumeOptions = () => {
 }
 
 export const actions = {
-  setVolume
+  setVolume,
+  getVolumeOptions
 }
 
 // ------------------------------------
@@ -36,6 +37,5 @@ const ACTION_HANDLERS = {
 const initialState = 100
 export default function volumeReducer (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
-
   return handler ? handler(state, action) : state
 }

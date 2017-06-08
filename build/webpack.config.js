@@ -147,11 +147,11 @@ config.module.rules.push({
 })
 
 config.module.rules.push({
-  test: /\.mp4$/,
-  loader: 'url-loader',
-  options : {
-    limit : 8192
-  },
+  test       : /\.mp4$/,
+  loader     : 'url-loader',
+  options    : {
+    limit    : 8192
+  }
 })
 
 // Fonts

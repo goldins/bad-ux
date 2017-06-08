@@ -1,16 +1,24 @@
 import React from 'react'
 import SelectVolume from './SelectVolume'
 import VideoElement from './VideoElement'
+import PropTypes from 'prop-types'
 
-const VolumeControlsView = (setVolume, getVolumeOptions, videoSource) => (
+const VolumeControlsView = ({ volume, setVolume, getVolumeOptions, videoSource }) => (
   <section className='col-12'>
     <h4>Volume Controls</h4>
-    <VideoElement source={videoSource} />
+    <VideoElement className='col-10' source={videoSource} />
     <div>
       {getVolumeOptions}
-      <SelectVolume volume={parseInt(1)} getVolumeOptions={getVolumeOptions} setVolume={setVolume} />
+      <SelectVolume volume={volume} getVolumeOptions={getVolumeOptions} setVolume={setVolume} />
     </div>
   </section>
 )
+
+VolumeControlsView.propTypes = {
+  volume: PropTypes.number.isRequired,
+  setVolume: PropTypes.func.isRequired,
+  getVolumeOptions: PropTypes.func.isRequired,
+  videoSource: PropTypes.string.isRequired,
+}
 
 export default VolumeControlsView

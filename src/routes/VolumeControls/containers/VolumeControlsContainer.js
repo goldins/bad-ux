@@ -1,16 +1,16 @@
 import { connect } from 'react-redux'
 import { getVolumeOptions, setVolume } from '../modules/volume'
 import VideoSource from '../assets/SampleVideo_1280x720_1mb.mp4'
-import VolumeControls from '../components/VolumeControlsView'
+import VolumeControlsView from '../components/VolumeControlsView'
 
 const mapDispatchToProps = {
-  setVolume: () => setVolume(1),
-  getVolumeOptions: getVolumeOptions,
-  videoSource: VideoSource
+  setVolume: () => setVolume,
+  getVolumeOptions,
 }
 
 const mapStateToProps = (state) => ({
-  volume: state.volume
+  volume: state.volume,
+  videoSource: VideoSource
 })
 
-export default connect(mapStateToProps, mapDispatchToProps)(VolumeControls)
+export default connect(mapStateToProps, mapDispatchToProps)(VolumeControlsView)
