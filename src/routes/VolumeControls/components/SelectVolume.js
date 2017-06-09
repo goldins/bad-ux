@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import VolumeOption from './VolumeOption'
-import styles from './SelectVolume.scss'
 
 class SelectVolume extends React.Component {
   render () {
