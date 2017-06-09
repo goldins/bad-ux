@@ -8,8 +8,7 @@ const VolumeControlsView = ({ volume, setVolume, getVolumeOptions, videoSource }
     <h4>Volume Controls</h4>
     <VideoElement className='col-10' source={videoSource} />
     <div>
-      {getVolumeOptions}
-      <SelectVolume volume={volume} getVolumeOptions={getVolumeOptions} setVolume={setVolume} />
+      <SelectVolume volume={volume} volumeOptions={getVolumeOptions()} setVolume={setVolume} />
     </div>
   </section>
 )

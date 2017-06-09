@@ -4,7 +4,7 @@ import VideoSource from '../assets/SampleVideo_1280x720_1mb.mp4'
 import VolumeControlsView from '../components/VolumeControlsView'
 
 const mapDispatchToProps = {
-  setVolume: () => setVolume,
+  setVolume,
   getVolumeOptions,
 }
 
