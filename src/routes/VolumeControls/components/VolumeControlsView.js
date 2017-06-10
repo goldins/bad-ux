@@ -6,7 +6,7 @@ import PropTypes from 'prop-types'
 const VolumeControlsView = ({ volume, setVolume, getVolumeOptions, videoSource }) => (
   <section className='col-12'>
     <h4>Volume Controls</h4>
-    <VideoElement className='col-10' source={videoSource} />
+    <VideoElement volume={volume} className='col-10' source={videoSource} />
     <div>
       <SelectVolume volume={volume} volumeOptions={getVolumeOptions()} setVolume={setVolume} />
     </div>
