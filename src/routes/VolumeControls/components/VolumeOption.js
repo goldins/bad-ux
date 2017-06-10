@@ -3,9 +3,10 @@ import PropTypes from 'prop-types'
 
 class VolumeOption extends React.Component {
   render () {
+    console.log(this.props.itemClassName);
     return (
       <li
-        className='select-volume-item'
+        className={this.props.itemClassName}
         onClick={this.props.clickHandler}>
         {this.props.displayValue}
       </li>
@@ -15,7 +16,8 @@ class VolumeOption extends React.Component {
 
 VolumeOption.propTypes = {
   clickHandler: PropTypes.func.isRequired,
-  displayValue: PropTypes.string.isRequired
+  displayValue: PropTypes.string.isRequired,
+  itemClassName: PropTypes.string
 }
 
 export default VolumeOption

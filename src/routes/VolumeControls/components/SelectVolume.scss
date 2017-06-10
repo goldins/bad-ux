@@ -1,0 +1,25 @@
+.select-volume {
+  float: left;
+  $item-size: 30px;
+  $item-color: #80BAFF;
+  &-item {
+    background: $item-color;
+    border-radius: $item-size / 2;
+    cursor: pointer;
+    display: inline-block;
+    font-size: round($item-size / 2.25);
+    height: $item-size;
+    list-style: none;
+    line-height: $item-size;
+    margin: $item-size / 10;
+    min-width: $item-size;
+    padding: 0 ($item-size / 10);
+    &:hover {
+      background: darken($item-color, 10%);
+    }
+    &--active {
+      @extend .select-volume-item;
+      background: darken($item-color, 20%);
+    }
+  }
+}
