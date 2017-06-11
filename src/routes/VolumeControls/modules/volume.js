@@ -13,9 +13,13 @@ export function setVolume (value = 1) {
   }
 }
 
+const map = require('lodash/fp/map').convert({ 'cap': false })
 export const getVolumeOptions = () => {
+  // create 101-length array (mute + 100 volume levels)
+  const opts = Array.apply(null, { length: 101 })
   return () => {
-    return [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    // fill with values of 0 - 101
+    return map((v, i) => i)(opts)
   }
 }
 
@@ -34,7 +38,11 @@ const ACTION_HANDLERS = {
 // ------------------------------------
 // Reducer
 // ------------------------------------
-const initialState = 5
+// initial value
+const volumeOptions = getVolumeOptions()()
+const initialIndex = Math.floor(volumeOptions.length / 2)
+// initial state = volume at middle index
+const initialState = volumeOptions[initialIndex]
 export default function volumeReducer (state = initialState, action) {
   const handler = ACTION_HANDLERS[action.type]
   return handler ? handler(state, action) : state

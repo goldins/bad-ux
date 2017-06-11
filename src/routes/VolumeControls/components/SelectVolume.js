@@ -12,7 +12,7 @@ class SelectVolume extends React.Component {
             key={opt}
             clickHandler={() => this.props.setVolume(opt)}
             displayValue={opt !== 0 ? opt.toString() : 'Mute'}
-            itemClassName={'select-volume-item' + (opt === this.props.volume ? '--active' : '')}
+            itemClassName={'select-volume-item' + (opt === this.props.volume ? ' select-volume-item--active' : '')}
           />
         ))}
       </ul>

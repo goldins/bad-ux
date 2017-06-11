@@ -16,11 +16,11 @@ class VideoElement extends React.Component {
   componentDidMount () {
     // todo: maybe there's a better way to get the video element?
     this.videoEl = document.getElementById(this.uniqueId)
-    this.videoEl.volume = this.props.volume / 10
+    this.videoEl.volume = this.props.volume / 100
   }
 
   componentWillReceiveProps (nextProps) {
-    this.videoEl.volume = nextProps.volume / 10
+    this.videoEl.volume = nextProps.volume / 100
   }
 }
 

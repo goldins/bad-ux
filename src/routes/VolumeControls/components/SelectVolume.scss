@@ -2,23 +2,24 @@
   float: left;
   $item-size: 30px;
   $item-color: #80BAFF;
+  display: flex;
   &-item {
+    flex: auto;
     background: $item-color;
-    border-radius: $item-size / 2;
+    border-radius: 0;
+    border: 1px solid darken($item-color, 10%);
     cursor: pointer;
     display: inline-block;
-    font-size: round($item-size / 2.25);
+    font-size: round($item-size / 2.5);
     height: $item-size;
     list-style: none;
     line-height: $item-size;
-    margin: $item-size / 10;
     min-width: $item-size;
-    padding: 0 ($item-size / 10);
+    padding: 0 ($item-size / 5);
     &:hover {
       background: darken($item-color, 10%);
     }
     &--active {
-      @extend .select-volume-item;
       background: darken($item-color, 20%);
     }
   }
