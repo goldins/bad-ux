@@ -3,7 +3,6 @@ import PropTypes from 'prop-types'
 
 class VolumeOption extends React.Component {
   render () {
-    console.log(this.props.itemClassName);
     return (
       <li
         className={this.props.itemClassName}

@@ -1,0 +1,6 @@
+@import '../VolumeItem.scss';
+
+.skeuo-buttons {
+  @include volumeItem(30px, #80BAFF);
+}
+

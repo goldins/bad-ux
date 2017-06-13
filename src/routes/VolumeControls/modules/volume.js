@@ -2,6 +2,7 @@
 // Constants
 // ------------------------------------
 export const VOLUME_SET = 'VOLUME_SET'
+export const VOLUME_DELTA = 'VOLUME_DELTA'
 
 // ------------------------------------
 // Actions
@@ -9,6 +10,20 @@ export const VOLUME_SET = 'VOLUME_SET'
 export function setVolume (value = 1) {
   return {
     type: VOLUME_SET,
+    payload: value
+  }
+}
+
+export function increaseVolume (value = 1) {
+  return {
+    type: VOLUME_DELTA,
+    payload: value
+  }
+}
+
+export function decreaseVolume (value = -1) {
+  return {
+    type: VOLUME_DELTA,
     payload: value
   }
 }
@@ -25,14 +40,17 @@ export const getVolumeOptions = () => {
 
 export const actions = {
   setVolume,
-  getVolumeOptions
+  getVolumeOptions,
+  increaseVolume,
+  decreaseVolume
 }
 
 // ------------------------------------
 // Action Handlers
 // ------------------------------------
 const ACTION_HANDLERS = {
-  [VOLUME_SET]: (state, action) => action.payload
+  [VOLUME_SET]: (state, action) => action.payload,
+  [VOLUME_DELTA]: (state, action) => state + action.payload
 }
 
 // ------------------------------------

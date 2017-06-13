@@ -1,14 +1,10 @@
-.select-volume {
-  float: left;
-  $item-size: 30px;
-  $item-color: #80BAFF;
-  display: flex;
-  &-item {
-    flex: auto;
+@import '../../../styles/main';
+
+@mixin volumeItem($item-size, $item-color) {
+  &__item {
     background: $item-color;
     border-radius: 0;
     border: 1px solid darken($item-color, 10%);
-    cursor: pointer;
     display: inline-block;
     font-size: round($item-size / 2.5);
     height: $item-size;
@@ -16,6 +12,7 @@
     line-height: $item-size;
     min-width: $item-size;
     padding: 0 ($item-size / 5);
+    @extend .clickable;
     &:hover {
       background: darken($item-color, 10%);
     }
