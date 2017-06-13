@@ -1,0 +1,25 @@
+@import '../../../styles/main';
+
+.volume-controls-view {
+  &__ux-list {
+    @extend .clickable;
+    list-style: none;
+    > * {
+      $text-color: #000;
+      color: $text-color;
+      display: inline-block;
+      padding-left: 10px;
+      &:first-of-type {
+        padding-left: 0;
+      }
+      &:hover {
+        color: lighten($text-color, 40%);
+      }
+    }
+  }
+  &__wrapper {
+    &--hide {
+      display: none;
+    }
+  }
+}

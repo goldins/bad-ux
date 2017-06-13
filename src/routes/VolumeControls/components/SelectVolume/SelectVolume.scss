@@ -1,0 +1,6 @@
+@import '../VolumeItem.scss';
+
+.select-volume {
+  @include volumeItem(30px, #80BAFF);
+}
+
