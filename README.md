@@ -7,5 +7,7 @@ The "true" purpose of this project is to get more familiar with React, redux, an
 Screenshots and/or descriptions of implemented components below.
 
 ## Volume Select
-<img class="screenshot" src="https://raw.githubusercontent.com/goldins/bad-ux/a5d7bd06a61f7e967053e0e593303c7b8c2c764c/public/VolumeSelect/VolumeSelect.png" width="400" />
+<img src="https://raw.githubusercontent.com/goldins/bad-ux/a5d7bd06a61f7e967053e0e593303c7b8c2c764c/public/VolumeSelect/VolumeSelect.png" width="400" />
 
+## Skeuomorphic Buttons
+<img src="https://github.com/goldins/bad-ux/blob/feature-skeuomorphic-buttons/public/VolumeSelect/SkeuoButtons.png" width="400" />
